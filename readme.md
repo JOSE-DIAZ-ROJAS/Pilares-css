@@ -1,4 +1,4 @@
-PILARES DE CSS
+PILARES DE CSS (Constituye las base de css)
 [SELECTORES]:
     1. SELECTOR UNIVERSAL: Se aplica a todos los elementos del documento ==> *{}
     2. SELECTOR DE ETIQUETA:  Coicide con los nombres de los elementos. ==> p{}
