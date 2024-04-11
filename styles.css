@@ -1,0 +1,122 @@
+/*[SELECTORES]*/
+
+/*Selector universal*/
+*{
+
+  background-color: aqua;  
+}
+
+/* Selector de tipo o etiqueta*/
+p , h1{
+color: red; font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Selector de clase*/
+.title {
+color:green;
+}
+
+/*Selector de idetificacion*/
+#google{
+background-color: rgb(255, 255, 255); font-style: oblique; font-style: italic;
+}
+
+/*Selector de atributos */
+
+              /*Si empieza por el valor*/
+              [href^="hola"]{
+                background-color: bisque;
+              }
+
+              /*Si contiene el valor*/
+              [href*="world"]{
+              font-style: oblique;
+              }
+               /*Si termina por el valor*/
+               [href$="dw"]{
+                color: orangered; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                }
+
+                
+/*Selectores agrupados (si vamos a dar los mismos estilos a varios elementos )*/ 
+.text-1,
+.text-2,
+.text-3{
+  background-color: antiquewhite;font-family: 'Times New Roman', Times, serif;
+}
+
+p , h1{
+  color: red; font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Selectores combinadores*/
+
+      /*selectores descendientes / selector de hijos (se separa por espacio y solo se recomienda descender 1 nivel)*/
+      /*Esto se puede aplicar tambien con los otros selectores */
+              div .title-sec{
+                background-color: yellowgreen;
+              }
+
+      /*---------Selector de hermano siguiente-------*/
+      .text-4 + .title-1{
+        color: rgb(107, 21, 187);
+      }
+
+       /*Selector de todos los hermanos siguientes "de un tipo determinado"*/
+                   /*Selecciono todos los hermanos "p" siguientes*/
+       h3~ p{
+        color: rgb(112, 29, 207);
+        }
+        /*
+         tambien se puede usar otros selectores
+       h3~ .text-5{
+       color: rgb(112, 29, 207);
+
+       }
+       */
+
+       /* Selector de hijo directo*/
+       .container> p{
+       background-color: rgb(214, 162, 162);
+       }
+       
+/*[ESPECIFICIDAD]*/
+     
+/*----------------------selector de etiqueta(0001)-------------------------------------*/
+h1{
+  background-color: blue;
+  }
+  
+  /*----------------------selector de clase (0010)------------------------------------------*/
+  .titulo{
+  background-color: blueviolet;
+  }
+  
+  /*----------------------selector de id(0100)----------------------------------------------*/
+  #tit{
+  background-color: brown;
+  }
+  /*---------------------selector de etiequeta-clse(0011)----------------------------------*/
+  h1.titulo{
+  background-color: rgb(194, 135, 48);
+  }
+  /*---------------------selector de etiqueta-id(0101)-------------------------------------*/
+  h1#tit{
+  background-color: aqua;
+  }
+  /*---------------------selector de etiqueta-clase-id (0111)---------------------------------*/
+  h1.titulo#tit{
+      background-color: rgb(209, 241, 213);
+  }
+  /*todos los selectores actuan sobre el miosmo elemento pero por especificidad(111) hace efecto el ultimo*/
+
+
+  /*HERENCIA*/
+.nlab{
+    color: rgb(201, 38, 38);
+    
+  }
+  .lab{
+    color: initial;/* con el rl valor "initial" hecemos que ciertos elemento nohereden la propiedad */
+  }
